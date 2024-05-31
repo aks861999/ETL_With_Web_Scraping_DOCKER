@@ -28,6 +28,8 @@ a. host address = postgres <br>
 b. username = postgres <br>
 c. Password = postgres <br>**
 
+![Postgres Authentication](static/postgres_auth.png)
+
       
 
 
