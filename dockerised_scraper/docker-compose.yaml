@@ -1,0 +1,50 @@
+version: '3'
+
+networks:
+  dem:
+
+services:
+  postgres:
+    image: postgres:latest   # You can change the version according to your requirement
+    restart : no
+    environment:
+      POSTGRES_USER: postgres       # Default user to create
+      POSTGRES_PASSWORD: postgres  # Default user's password
+      POSTGRES_DB: future_db   # Default database to create
+  
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5432:5432  # Expose the PostgreSQL port to the host
+    networks:
+      - dem
+  
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: no
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com  # Default admin email for pgAdmin
+      PGADMIN_DEFAULT_PASSWORD: admin  # Default admin password
+    ports:
+      - 5000:80  # Expose pgAdmin's web interface
+    
+    depends_on:
+      - postgres  # Ensure PostgreSQL starts before pgAdmin
+    networks:
+      - dem
+
+  app:
+    restart: no #  the docker container will be restarting whenever the conainer is stopped
+
+    # using the docker hub image
+    image: akash270/event-scraper:latest
+    
+    #build: 
+    #  context: .  # The current directory, containing the Dockerfile
+    #  dockerfile: Dockerfile_app
+    volumes:
+      - .:/future-demand  # so that when ever the python file is changed, to refelect that into the app, I just need to run the docker compose
+    depends_on:
+      - postgres
+    networks:
+      - dem

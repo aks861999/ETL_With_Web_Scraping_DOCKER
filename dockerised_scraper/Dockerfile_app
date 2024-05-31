@@ -1,0 +1,17 @@
+# Use the official PostgreSQL image from Docker Hub
+FROM python:3.6
+
+
+# Update the docker container
+RUN apt-get update
+
+COPY . /future-demand
+
+WORKDIR /future-demand
+
+
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+
+CMD ["python","postgres.py"]
