@@ -23,7 +23,8 @@ Step - 3 - Pull the Docker Image  <br>**
 **1. To pull the image, Please run docker pull akash270/event-scraper:latest <br>
 2. After that please run the docker-compose.yaml file by docker-compose -f docker-compose.yaml up -d <br>
 3. on your favourite browser open localhost:5000, and login with email_id = admin@admin.com , password = admin <br>
-4. Then you have to register the server with the below Database Credentials
+4. Then you have to register the server with the below Database Credentials <be>
+
 a. host address = postgres <br>
 b. username = postgres <br>
 c. Password = postgres <br>**
