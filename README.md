@@ -30,6 +30,9 @@ c. Password = postgres <br>**
 
 ![Postgres Authentication](static/postgres_auth.png)
 
+
+**If you face any issues in running the docker please do reach out to my Linkedin https://www.linkedin.com/in/akash-biswas/**
+
       
 
 
