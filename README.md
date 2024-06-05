@@ -1,5 +1,5 @@
 
-<span style="font-size: 24px;"><strong>Rolls Royce Internship Interview</strong></span>
+<span style="font-size: 50px;"><strong>Rolls Royce Internship Interview</strong></span>
 
 ETL with Web scraping project with Pythin3, PostgreSQL, Docker
 
