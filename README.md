@@ -1,11 +1,7 @@
 
-<span style="font-size: 50px;"><strong>Rolls Royce Internship Interview</strong></span>
+<span style="font-size: 50px;"><strong>Internship Interview</strong></span>
 
 ETL with Web scraping project with Pythin3, PostgreSQL, Docker
-
-
-This project is a part of an interview at Rolls Royce.
-
 
 This is an End-to-End ETL Data Analytics project, that scraps Events Data from the link https://www.lucernefestival.ch/en/program/summer-festival-24 .
 
